@@ -59,7 +59,7 @@
 				"     validateSchema: false,",
 				"     format: 'delta',",
 				"     container: 'deltalake',",
-				"     folderPath: 'tmp_trip_transaction',",
+				"     folderPath: 'Bronze/trip_trans',",
 				"     mergeSchema: false,",
 				"     autoCompact: false,",
 				"     optimizedWrite: false,",
