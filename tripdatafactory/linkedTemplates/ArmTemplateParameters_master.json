@@ -11,6 +11,9 @@
 		"TripTransaction_connectionString": {
 			"value": ""
 		},
+		"reward_points_connectionString": {
+			"value": ""
+		},
 		"containerUri": {
 			"value": ""
 		},
