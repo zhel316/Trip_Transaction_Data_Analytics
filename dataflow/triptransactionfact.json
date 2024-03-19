@@ -1,0 +1,61 @@
+{
+	"name": "triptransactionfact",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "AzureSql_ridetranTable1",
+						"type": "DatasetReference"
+					},
+					"name": "datasource1"
+				}
+			],
+			"sinks": [
+				{
+					"name": "sink1"
+				}
+			],
+			"transformations": [
+				{
+					"name": "filter1"
+				}
+			],
+			"scriptLines": [
+				"source(output(",
+				"          trip_id as integer,",
+				"          trip_start_timestamp as timestamp,",
+				"          trip_end_timestamp as timestamp,",
+				"          driver_id as string,",
+				"          driver_name as string,",
+				"          source_location_address1 as string,",
+				"          source_city as string,",
+				"          source_province_state as string,",
+				"          source_country as string,",
+				"          destination_location_address1 as string,",
+				"          destination_city as string,",
+				"          destination_province_state as string,",
+				"          destination_country as string,",
+				"          total_distance as integer,",
+				"          total_fare as integer,",
+				"          trip_status as string,",
+				"          delay_start_time_mins as integer,",
+				"          payment_method as string,",
+				"          payment_Status as string,",
+				"          customer_id as integer,",
+				"          customer_name as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     isolationLevel: 'READ_UNCOMMITTED',",
+				"     format: 'table') ~> datasource1",
+				"datasource1 filter(1 == 1) ~> filter1",
+				"filter1 sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> sink1"
+			]
+		}
+	}
+}
