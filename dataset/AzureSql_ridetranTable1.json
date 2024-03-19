@@ -1,0 +1,110 @@
+{
+	"name": "AzureSql_ridetranTable1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "trip_id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "trip_start_timestamp",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "trip_end_timestamp",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "driver_id",
+				"type": "nvarchar"
+			},
+			{
+				"name": "driver_name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "source_location_address1",
+				"type": "nvarchar"
+			},
+			{
+				"name": "source_city",
+				"type": "nvarchar"
+			},
+			{
+				"name": "source_province_state",
+				"type": "nvarchar"
+			},
+			{
+				"name": "source_country",
+				"type": "nvarchar"
+			},
+			{
+				"name": "destination_location_address1",
+				"type": "nvarchar"
+			},
+			{
+				"name": "destination_city",
+				"type": "nvarchar"
+			},
+			{
+				"name": "destination_province_state",
+				"type": "nvarchar"
+			},
+			{
+				"name": "destination_country",
+				"type": "nvarchar"
+			},
+			{
+				"name": "total_distance",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "total_fare",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "trip_status",
+				"type": "nvarchar"
+			},
+			{
+				"name": "delay_start_time_mins",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "payment_method",
+				"type": "nvarchar"
+			},
+			{
+				"name": "payment_Status",
+				"type": "nvarchar"
+			},
+			{
+				"name": "customer_id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "customer_name",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "trip_transactions_1"
+		}
+	}
+}
